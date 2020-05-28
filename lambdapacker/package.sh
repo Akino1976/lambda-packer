@@ -1,5 +1,5 @@
 #!/bin/sh
-
+shopt -s dotglob
 PACKAGE_NAME=${1:-lambda.zip}
 
 mkdir -p /packages
