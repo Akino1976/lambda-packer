@@ -1,4 +1,4 @@
-FROM lambci/lambda:build-python3.7 as build
+FROM lambci/lambda:build-python3.8. as build
 
 COPY lambdapacker /lambdapacker
 
