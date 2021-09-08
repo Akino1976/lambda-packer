@@ -1,5 +1,5 @@
 #!/bin/sh
-
+shopt -s dotglob
 PACKAGE_NAME=${1:-lambda.zip}
 
 mkdir -p /packages
@@ -16,7 +16,7 @@ cp -r ${PWD}/* /tmp/package
 
 cd /tmp/package
 
-zip -r /packages/${PACKAGE_NAME} * -x requirements.txt
+zip -r /packages/${PACKAGE_NAME} * .[^.]* -x requirements.txt
 
 echo ""
 echo "> Finished packaging lambda into /packages/${PACKAGE_NAME}"
